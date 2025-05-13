@@ -1,17 +1,20 @@
-def fibonacci(num):
-    if num == 0:
-        return 0
-    elif num == 1:
-        return 0
-    elif num == 2:
-        return 1
+function fibonacci(num) {
+    if (num === 0) {
+        return 0;
+    } else if (num === 1) {
+        return 0;
+    } else if (num === 2) {
+        return 1;
+    }
 
-    a, b = 0, 1
-    for _ in range(2, num):
-        a, b = b, a + b
-    
-    return b
+    let a = 0, b = 1;
+    for (let i = 2; i < num; i++) {
+        [a, b] = [b, a + b];
+    }
 
-# Test cases
-print(fibonacci(1))  # Output: 0
-print(fibonacci(5))  # Output: 3
+    return b;
+}
+
+// Test cases
+console.log(fibonacci(1)); // Output: 0
+console.log(fibonacci(5)); // Output: 3
