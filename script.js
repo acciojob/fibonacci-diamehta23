@@ -4,11 +4,11 @@ function fibonacci(num) {
 
     let a = 0, b = 1;
     for (let i = 3; i <= num; i++) {
-        let next = a + b;
+        let temp = a + b;
         a = b;
-        b = next;
+        b = temp;
     }
     return b;
 }
 
-
+module.exports = fibonacci;
