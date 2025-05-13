@@ -1,12 +1,17 @@
-function fibonacci(num) {
-    if (num === 1) return 0;
-    if (num === 2) return 1;
+def fibonacci(num):
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 0
+    elif num == 2:
+        return 1
 
-    let a = 0, b = 1;
-    for (let i = 3; i <= num; i++) {
-        const next = a + b;
-        a = b;
-        b = next;
-    }
-    return b;
-}
+    a, b = 0, 1
+    for _ in range(2, num):
+        a, b = b, a + b
+    
+    return b
+
+# Test cases
+print(fibonacci(1))  # Output: 0
+print(fibonacci(5))  # Output: 3
